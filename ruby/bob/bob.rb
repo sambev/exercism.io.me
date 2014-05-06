@@ -1,22 +1,10 @@
 class Bob
     def hey(remark)
-        def yelling?(msg)
-            msg.upcase == msg && msg =~ /[A-Z]/
-        end
-
-        def silence?(msg)
-            msg.strip.length == 0
-        end
-
-        def question?(msg)
-            msg.end_with? '?'
-        end
-
-        if silence?(remark)
+        if remark.strip.length == 0
             'Fine. Be that way!'
-        elsif yelling?(remark)
+        elsif remark.upcase == remark && remark =~ /[A-Z]/
             'Woah, chill out!'
-        elsif question?(remark)
+        elsif remark.end_with? '?'
             'Sure.'
         else
             'Whatever.'
