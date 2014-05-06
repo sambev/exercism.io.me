@@ -1,13 +1,7 @@
 class Bob
     def hey(remark)
         def yelling?(msg)
-            alpha = false
-            msg.each_char do |char|
-                if char =~ /[[:alpha:]]/
-                    alpha = true
-                end
-            end
-            msg.upcase == msg && alpha
+            msg.upcase == msg && msg =~ /[A-Z]/
         end
 
         def silence?(msg)
